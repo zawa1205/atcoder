@@ -1,6 +1,3 @@
-import * as fs from 'fs'
-const arg = fs.readFileSync('/dev/stdin', 'utf8')
-
 class FixedDequeue<T = number> {
     private head: number
     private tail: number
@@ -52,29 +49,18 @@ class FixedDequeue<T = number> {
     }
 }
 
-// prettier-ignore
-const input = arg.trim().split('\n').filter(e => { return e !== '' })
-/**
- * 標準入力
- */
-const N: number = Number(input[0]) // １文字
-// const [A, B]: number[] = input[0].split(' ').map((s: string) => Number(s)) // 1次元配列(number)
-// const S: string[] = input[0].split(' ') // 1次元配列(string)
-// const inputs = arg.split('\n').filter(e => { return e !== '' }).slice(1).map(row => (row.split(' '))) // ２次元配列(string)
-// const inputs = arg.split('\n').filter(e => { return e !== '' }).slice(1).map(row => (row.split(' ').map((s: string) => Number(s)))) // ２次元配列(number)
-// prettier-ignore
-const inputs = arg.split('\n').filter(e => { return e !== '' }).slice(1).map(row => (row.split(' '))) // ２次元配列(string)
+// function main() {
+//     // queueの最大の長さで初期化
+//     const deck = new FixedDequeue<string>(5)
+//     deck.push('hoge')
+//     deck.push('huga')
+//     deck.push('piyo')
+//     deck.unshift('foo') // 先頭に追加
+//     deck.shift() // // 先頭を取り出す
+//     deck.pop()
+//     console.log(deck.first())
+//     console.log(deck)
+//     console.log(deck.at(1)) // 0始まり
+// }
 
-function main() {
-    const deck = new FixedDequeue<string>(N)
-    for (let i = 0; i < N; i++) {
-        const query = Number(inputs[i][0])
-        const name = inputs[i][1]
-
-        if (query === 1) deck.push(name)
-        if (query === 2) console.log(deck.first())
-        if (query === 3) deck.shift()
-    }
-}
-
-main()
+// main()
