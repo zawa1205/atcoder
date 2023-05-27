@@ -3,6 +3,13 @@ const arg = fs.readFileSync('/dev/stdin', 'utf8')
 const input = arg.trim().split('\n').filter(e => { return e !== '' })
 
 /**
+ * 標準出力
+ */
+
+// 改行なし
+process.stdout.write('')
+
+/**
  * 標準入力
  */
 
