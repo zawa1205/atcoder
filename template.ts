@@ -11,7 +11,7 @@ const input = arg.trim().split('\n').filter(e => { return e !== '' })
 // const inputs = arg.split('\n').filter(e => { return e !== '' }).slice(1).map(row => (row.split(' '))) // ２次元配列(string)
 // const inputs = arg.split('\n').filter(e => { return e !== '' }).slice(1).map(row => (row.split(' ').map((s: string) => Number(s)))) // ２次元配列(number)
 
-function main() {
+const main = () => {
 
 }
 
