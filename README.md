@@ -19,7 +19,7 @@ pnpm i
 ## Execute files
 
 ```sh
-pnpm test abc123/a.ts
+pnpm test abc/abc301/c_AtcoderCards.ts
 ```
 
 ### ※ Caution ※
@@ -27,7 +27,7 @@ pnpm test abc123/a.ts
 実行後、標準入力を終了する場合は Control + D
 
 ```sh
-pnpm test abc123/a.ts
+pnpm test abc/abc301/c_AtcoderCards.ts
 
 > aaa bbb ccc
 （ Press Control + D ）
