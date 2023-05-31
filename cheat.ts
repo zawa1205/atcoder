@@ -66,3 +66,9 @@ interface Obj {
 }
 let obj: Obj = {}
 obj.hoge = 'hogehoge'
+
+// mapをkey, value保持してforループ
+const map = new Map()
+map.forEach((value, key) => {
+    console.log(key, value)
+})
