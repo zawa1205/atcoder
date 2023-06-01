@@ -8,10 +8,10 @@ const move = (s: string) => {
         current[0]++
     }
     if (s === 'U') {
-        current[1]--
+        current[1]++
     }
     if (s === 'D') {
-        current[1]++
+        current[1]--
     }
 }
 
@@ -41,20 +41,17 @@ const main = () => {
     for (let i = 0; i < S.length; i++) {
         move(S[i])
         life--
-        if (life < 0 && i + 1 < N) {
+        if (life < 0) {
             console.log('No')
             return
         }
-        if (life >= 0 && i + 1 === N) {
-            console.log('Yes')
-            return
-        }
         if (life < K && inputsSet.has(current.toString())) {
-            life += K
+            life = K
             inputsSet.delete(current.toString())
         }
         // console.log('turn' + (i + 1) + ': ' + life + ' ' + current)
     }
+    console.log('Yes')
 }
 
 main()
